@@ -1,0 +1,35 @@
+body {
+    background: white;
+    font-family: Ubuntu;
+}
+
+#img-perfil {
+
+    filter: grayscale(100%);
+    border-radius: 200px;
+    
+}
+
+.border-left {
+
+    border-left: 2px solid gray;
+}
+
+.python-bg{
+    background-color: blue;
+}
+
+.html-bg{
+
+    background-color: orangered;
+}
+
+.js-bg{
+    background-color: orange;
+}
+
+.sql-bg{
+    background-color: blueviolet;
+}
+
+
