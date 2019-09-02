@@ -1,35 +1,46 @@
-body {
-    background: white;
-    font-family: Ubuntu;
+body::after {
+    content: "";
+    background: url("/static/img/bg.gif");
+    background-size: 100%;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
 }
 
 #img-perfil {
-
     filter: grayscale(100%);
     border-radius: 200px;
-    
 }
 
 .border-left {
-
     border-left: 2px solid gray;
 }
 
 .python-bg{
-    background-color: blue;
+    background-color: rgb(113, 89, 193);
 }
 
 .html-bg{
-
-    background-color: orangered;
+    background-color: rgb(113, 89, 193);
 }
 
 .js-bg{
-    background-color: orange;
+    background-color: rgb(113, 89, 193);
+}
+
+.css-bg{
+    background-color: rgb(113, 89, 193);
 }
 
 .sql-bg{
-    background-color: blueviolet;
+    background-color: rgb(113, 89, 193);
 }
 
+.media-img{
+    width: 30px;;
+}
 

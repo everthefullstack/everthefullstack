@@ -1,8 +1,10 @@
 # coding=UTF-8
-from flask import Flask, render_template
+from flask import Flask, render_template, render_template_string
+from flask_sslify import SSLify
 
 # instancia o app
 app = Flask(__name__)
+sslify = SSLify(app)
 app.config.from_object('config.ProductionConfig')
 
 ############################################################################################################################################
@@ -17,20 +19,29 @@ def skills():
 
     return render_template('skills.html')
 ############################################################################################################################################
-@app.route('/projetos')
-def projetos():
+@app.route('/formacao')
+def formacao():
 
-    return "<h1>Página projetos em construção</h1>"
+    template = """<h1>Página formação em construção</h1> <br> <a href="{{ url_for('index') }}">Voltar para o início</a>"""
+    return render_template_string(template)
+############################################################################################################################################
+@app.route('/experiencia')
+def experiencia():
+
+    template = """<h1>Página experiência em construção</h1> <br> <a href="{{ url_for('index') }}">Voltar para o início</a>"""
+    return render_template_string(template)
 ############################################################################################################################################
 @app.route('/sobre')
 def sobre():
 
-    return "<h1>Página sobre em construção</h1>"
+    template = """<h1>Página sobre em construção</h1> <br> <a href="{{ url_for('index') }}">Voltar para o início</a>"""
+    return render_template_string(template)
 ############################################################################################################################################
-@app.route('/contato')
-def contato():
+@app.route('/blog')
+def blog():
 
-    return "<h1>Página contato em construção</h1>"
+    template = """<h1>Página blog em construção</h1> <br> <a href="{{ url_for('index') }}">Voltar para o início</a>"""
+    return render_template_string(template)
 ############################################################################################################################################
 # inicia o servidor
 if __name__ == "__main__":
